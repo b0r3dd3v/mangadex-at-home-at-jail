@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# PROVIDE: mangadexathome
+
+. /etc/rc.subr
+
+name="mangadexathome"
+rcvar=`set_rcvar`
+command="java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar"
+pidfile="/var/run/mangadexathome"
+start_precmd="mangadexathome_prestart"
+#stop_cmd=":"
+
+load_rc_config $name
+
+mangadexathome_prestart()
+{
+    if checkyesno ${rcvar}; then
+      cd /usr/home/mangadexathome/mangadexathome
+    fi
+}
+
+run_rc_command "$1"
+
