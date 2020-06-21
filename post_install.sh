@@ -4,7 +4,7 @@
 pw add user -n mangadexathome -c mangadexathome -s /bin/nologin
 
 # Make are rc.d script executable
-chmod +x /usr/local/etc/rc.d/mangadexathome
+chmod +x /etc/rc.d/mangadexathome
 
 # Configure mangadexathome
 
