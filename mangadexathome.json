@@ -4,7 +4,8 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/radonbark/mangadex-at-home-at-jail.git",
   "pkgs": [
-    "java/openjdk14"
+    "java/openjdk14",
+    "textproc/jq"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {

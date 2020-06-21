@@ -1,0 +1,13 @@
+{
+  "unofficial_config_version": 1,
+  "client_secret": "",
+  "max_cache_size_in_mebibytes": 9001,
+  "client_port": 9001,
+  "max_kilobits_per_second": 9001,
+  "max_mebibytes_per_hour": 9001,
+  "threads": 9001,
+  "web_settings": {
+    "ui_hostname": "127.0.0.1",
+    "ui_port": 9001
+  }
+}
