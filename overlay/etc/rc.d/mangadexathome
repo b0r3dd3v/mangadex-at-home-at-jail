@@ -10,7 +10,6 @@ command="java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /
 pidfile="/var/run/mangadexathome"
 start_precmd="mangadexathome_prestart"
 #stop_cmd=":"
-mangadexathome_user
 
 load_rc_config $name
 
