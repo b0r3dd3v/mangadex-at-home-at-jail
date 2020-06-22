@@ -62,14 +62,14 @@
 		"ui_hostname": {
 			"type": "string",
 			"name": "ui_hostname",
-			"description": "The hostname to use for the server stats",
+			"description": "The hostname to use for the server stats. Warning: This could break the FreeNAS plugin manage button.",
 			"default": "127.0.0.1",
 			"requirerestart": true
 		},
 		"ui_port": {
 			"type": "int",
 			"name": "ui_port",
-			"description": "The port number to use for the server stats",
+			"description": "The port number to use for the server stats. Warning: This could break the FreeNAS plugin manage button.",
             "range": "0-65535",
 			"default": "44445",
 			"requirerestart": true
