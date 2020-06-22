@@ -4,15 +4,17 @@ settings_file=/usr/home/mangadexathome/mangadexathome/settings.json
 
 # Set data for settings.json
 case $1 in
-    client_secret) jq --arg "$2" '.client_secret = $2' $settings_file ;;
-	client_port) jq --arg "$2" '.client_port = $2' $settings_file ;;
-	threads) jq --arg "$2" '.client_port = $2' $settings_file ;;
-	graceful_shutdown_wait_seconds) jq --arg "$2" '.graceful_shutdown_wait_seconds = $2' settings_file ;;
-	max_cache_size_in_mebibytes) jq --arg "$2" '.max_cache_size_in_mebibytes = $2' $settings_file ;;
-	max_kilobits_per_second) jq --arg "$2" '.max_kilobits_per_second = $2' $settings_file ;;
-	max_mebibytes_per_hour) jq --arg "$2" '.max_mebibytes_per_hour = $2' $settings_file ;;
-	ui_hostname) jq --arg "$2" '.web_settings.ui_hostname = $2' $settings_file ;;
-	ui_port) jq --arg "$2" '.web_settings.ui_port = $2' $settings_file ;;
+    client_secret) jq --arg a2 "$2" '.client_secret = $a2' $settings_file ;;
+	client_port) jq --arg a2 "$2" '.client_port = $a2' $settings_file ;;
+	threads) jq --arg a2 "$2" '.client_port = $a2' $settings_file ;;
+	graceful_shutdown_wait_seconds) jq --arg a2 "$2" '.graceful_shutdown_wait_seconds = $a2' settings_file ;;
+	max_cache_size_in_mebibytes) jq --arg a2 "$2" '.max_cache_size_in_mebibytes = $a2' $settings_file ;;
+	max_kilobits_per_second) jq --arg a2 "$2" '.max_kilobits_per_second = $a2' $settings_file ;;
+	max_mebibytes_per_hour) jq --arg a2 "$2" '.max_mebibytes_per_hour = $a2' $settings_file ;;
+	ui_hostname) jq --arg a2 "$2" '.web_settings.ui_hostname = $a2' $settings_file 
+	    echo "Setting this may break the FreeNAS UI 'Manage' button";;
+	ui_port) jq --arg a2 "$2" '.web_settings.ui_port = $a2' $settings_file
+	    echo "Setting this may break the FreeNAS UI 'Manage' button";;
 	*) echo "Unknown option" ;;
 esac
 
