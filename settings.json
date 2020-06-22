@@ -65,13 +65,13 @@
 			"description": "The hostname to use for the server stats",
 			"default": "127.0.0.1",
 			"requirerestart": true
-		}
+		},
 		"ui_port": {
 			"type": "int",
 			"name": "ui_port",
 			"description": "The port number to use for the server stats",
             "range": "0-65535",
-			"default": "8080",
+			"default": "44445",
 			"requirerestart": true
 		}
 
