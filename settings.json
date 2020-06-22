@@ -38,7 +38,7 @@
 		"max_cache_size_in_mebibytes": {
 			"type": "int",
 			"name": "max_cache_size_in_mebibytes",
-			"description": "The max on disk cache to use in mebibytes (0 for no limit),
+			"description": "The max on disk cache to use in mebibytes (0 for no limit)",
 			"default": 80000,
 			"requirerestart": true
 			
