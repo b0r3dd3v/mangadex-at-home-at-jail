@@ -33,5 +33,4 @@ sysrc mangadexathome_enable=YES
 
 # We can't start the service because the settings.json has to be configured
 
-echo "The mangadexathome jar is not public yet. You MUST download it yourself and copy it into '/usr/home/mangadexathome/mangadexathome/mangadex_at_home.jar' before starting the service."
 echo "Make sure to add your client_secret to '/usr/home/mangadexathome/mangadexathome/settings.json' and configure the other settings for your system (or set them via iocage set)"

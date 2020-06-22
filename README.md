@@ -16,7 +16,7 @@ Once that's done, you can install the plugin
 
 Because the Mangadex at Home jar is not public you need to find and add the jar yourself. The jar should be renamed to "" and added in the "/usr/home/mangadexathome/mangadexathome" directory.
 
-Make sure you also add your secret key to the "/usr/home/mangadexathome/mangadexathome/settings.json" file and update the limits to reflect your own system.
+Make sure you also add your secret key to the "/usr/home/mangadexathome/mangadexathome/settings.json" file and update the limits to reflect your own system (or set them via iocage set).
 
 Finally start the service
 

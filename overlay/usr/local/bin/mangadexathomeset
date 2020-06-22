@@ -1,5 +1,7 @@
 #!/bin/sh
 
+settings_file=/usr/home/mangadexathome/mangadexathome/settings.json
+
 # Set data for settings.json
 case $1 in
     client_secret) jq --arg "$2" '.client_secret = $2' settings_file ;;
