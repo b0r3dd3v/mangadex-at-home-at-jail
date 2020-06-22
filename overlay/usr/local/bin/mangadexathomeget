@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Retrieve data from settings.json
+case $1 in
+	client_port) echo $1 ;;
+	threads) echo $1 ;;
+	graceful_shutdown_wait_seconds) echo $1 ;;
+	max_cache_size_in_mebibytes) echo $1 ;;
+	max_kilobits_per_second) echo $1 ;;
+	max_mebibytes_per_hour) echo $1 ;;
+	ui_hostname) echo $1 ;;
+	ui_port) echo $1 ;;
+	*) echo "Unknown option" ;;
+esac
+

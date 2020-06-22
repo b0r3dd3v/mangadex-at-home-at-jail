@@ -1,0 +1,72 @@
+{
+	"servicerestart":"service mangadexathome restart",
+	"serviceget": "/usr/local/bin/mangadexathomeget",
+	"serviceset": "/usr/local/bin/mangadexathomeset",
+	"options": {
+		"client_port": {
+			"type": "int",
+			"name": "client_port",
+			"description": "Port for incoming Mnagdex client connections",
+			"range": "0-65535",
+			"default": "44444",
+			"requirerestart": true
+		},
+		"threads": {
+			"type": "int",
+			"name": "threads",
+			"description": "The max number of threads to use",
+			"default": 16,
+			"requirerestart": true
+			
+		},	
+		"graceful_shutdown_wait_seconds": {
+			"type": "int",
+			"name": "graceful_shutdown_wait_seconds",
+			"description": "The max time to wait in seconds when trying to shutdown gracefully.",
+			"default": 60,
+			"requirerestart": true
+			
+		},
+		"max_cache_size_in_mebibytes": {
+			"type": "int",
+			"name": "max_cache_size_in_mebibytes",
+			"description": "The max on disk cache to use in mebibytes (0 for no limit),
+			"default": 80000,
+			"requirerestart": true
+			
+		},
+		"max_kilobits_per_second": {
+			"type": "int",
+			"name": "max_kilobits_per_second",
+			"description": "The max bandwidth speed to use in kilobytes per second (0 for no limit)",
+			"default": 0,
+			"requirerestart": true
+			
+		},
+		"max_mebibytes_per_hour": {
+			"type": "int",
+			"name": "max_mebibytes_per_hour",
+			"description": "The max network usage to use over an hour in mebibytes per hour (0 for no limit)",
+			"default": 0,
+			"requirerestart": true
+			
+		},
+		"ui_hostname": {
+			"type": "string",
+			"name": "ui_hostname",
+			"description": "The hostname to use for the server stats",
+			"default": "127.0.0.1",
+			"requirerestart": true
+		}
+		"ui_port": {
+			"type": "int",
+			"name": "ui_port",
+			"description": "The port number to use for the server stats",
+            "range": "0-65535",
+			"default": "8080",
+			"requirerestart": true
+		}
+
+	}
+}
+
