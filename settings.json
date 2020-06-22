@@ -3,10 +3,18 @@
 	"serviceget": "/usr/local/bin/mangadexathomeget",
 	"serviceset": "/usr/local/bin/mangadexathomeset",
 	"options": {
+	    "client_secret": {
+			"type": "string",
+			"name": "client_secret",
+			"description": "Secret key used to register the mangadexathome client",
+			"range": "0-65535",
+			"default": "44444",
+			"requirerestart": true
+		},
 		"client_port": {
 			"type": "int",
 			"name": "client_port",
-			"description": "Port for incoming Mnagdex client connections",
+			"description": "Port for incoming Mangadex client connections",
 			"range": "0-65535",
 			"default": "44444",
 			"requirerestart": true
