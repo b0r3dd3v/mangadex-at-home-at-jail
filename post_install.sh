@@ -15,13 +15,7 @@ cd /usr/home/mangadexathome/mangadexathome
 # Deal with the settings.json file
 if [ -e settings.json ]
 then
-  # If "settings.json" exists, check if it is an outdated configuration
-  defaultVersion = jq '.unofficial_config_version' settings.json.default
-  operationalVersion = jq '.unofficial_config_version' settings.json
-  
-  if [ $defaultVersion -ne $operationalVersion ]
-  then
-    echo "The settings.json 'unofficial_config_version' differs from the value in settings.json.default. Please compare them for changes and update the version as needed."
+    echo "The settings.json file already exists. Please compare it with settings.json.default for any new parameters/etc."
   fi
 else
   # If "settings.json" doesn't exist, make it based on "settings.json.default"

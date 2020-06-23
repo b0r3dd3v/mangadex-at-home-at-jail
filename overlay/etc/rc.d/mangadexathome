@@ -5,15 +5,20 @@
 . /etc/rc.subr
 
 name="mangadexathome"
+user="mangadexathome"
 rcvar=`set_rcvar`
-command="java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/null 2>&1"
 pidfile="/var/run/mangadexathome"
+#command="java -Dfile-level=info "
+
+command="usr/sbin/daemon -p $pidfile -u $user java"
+command_args="-Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/null 2>&1"
+
 start_precmd="mangadexathome_prestart"
 #stop_cmd=":"
 
 load_rc_config $name
 
-: ${mangadexathome_user=mangadexathome}
+#: ${mangadexathome_user=mangadexathome}
 
 mangadexathome_prestart()
 {
