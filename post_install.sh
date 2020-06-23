@@ -16,7 +16,6 @@ cd /usr/home/mangadexathome/mangadexathome
 if [ -e settings.json ]
 then
     echo "The settings.json file already exists. Please compare it with settings.json.default for any new parameters/etc."
-  fi
 else
   # If "settings.json" doesn't exist, make it based on "settings.json.default"
   cp settings.json.default settings.json
