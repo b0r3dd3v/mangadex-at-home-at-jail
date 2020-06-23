@@ -6,15 +6,13 @@ settings_file=/usr/home/mangadexathome/mangadexathome/settings.json
 case $1 in
     client_secret) echo `jq '.client_secret' $settings_file` ;;
 	client_port) echo `jq '.client_port' $settings_file` ;;
-	threads) echo j`q '.threads' $settings_file` ;;
+	threads) echo `jq '.threads' $settings_file` ;;
 	graceful_shutdown_wait_seconds) echo `jq '.graceful_shutdown_wait_seconds' $settings_file` ;;
 	max_cache_size_in_mebibytes) echo `jq '.max_cache_size_in_mebibytes' $settings_file` ;;
 	max_kilobits_per_second) echo `jq '.max_kilobits_per_second' $settings_file` ;;
 	max_mebibytes_per_hour) echo `jq '.max_mebibytes_per_hour' $settings_file` ;;
 	ui_hostname) echo `jq '.ui_hostname' $settings_file` ;;
 	ui_port) echo `jq '.ui_port' $settings_file` ;;
-	*) echo "Unknown option" ;;
+	*) echo "Unknown option: $1" ;;
 esac
-
-echo $result
 

@@ -6,7 +6,7 @@
 
 name="mangadexathome"
 rcvar=`set_rcvar`
-command="java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/nnull 2>&1"
+command="java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/null 2>&1"
 pidfile="/var/run/mangadexathome"
 start_precmd="mangadexathome_prestart"
 #stop_cmd=":"
