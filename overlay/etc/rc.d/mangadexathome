@@ -7,8 +7,9 @@
 name="mangadexathome"
 user="mangadexathome"
 rcvar=`set_rcvar`
-pidfile="/var/run/mangadexathome"
+pidfile="/var/run/mangadexathome.pid"
 start_cmd="${name}_start"
+stop_cmd="${name}_stop"
 
 load_rc_config $name
 
@@ -16,7 +17,20 @@ mangadexathome_start()
 {
     if checkyesno ${rcvar}; then
       cd /usr/home/mangadexathome/mangadexathome
-      /usr/sbin/daemon p $pidfile -u $user java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/null 2>&1
+      /usr/sbin/daemon -p $pidfile -u $user java -Dfile-level=info -Dstdout-level=off -jar mangadex_at_home.jar > /dev/null 2>&1
+    fi
+}
+
+mangadexathome_stop()
+{
+    if [ -e $pidfile ]; then
+        read pid < $pidfile
+        case $pid in
+            *[!0-9]*) echo "$pidfile is not a valid pid file" ;;
+            *) kill $pid ;;
+        esac
+    else
+        echo "$pidfile does not exist (is mangadexathome running?)"
     fi
 }
 

@@ -1,5 +1,4 @@
 {
-  "unofficial_config_version": 2,
   "client_secret": "nosenpaithisisoursecret",
   "client_hostname": "0.0.0.0",
   "client_port": 44300,
