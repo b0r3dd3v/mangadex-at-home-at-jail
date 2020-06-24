@@ -8,7 +8,7 @@
   "max_kilobits_per_second": 0,
   "max_mebibytes_per_hour": 0,
   "web_settings": {
-    "ui_hostname": "127.0.0.1",
+    "ui_hostname": "0.0.0.0",
     "ui_port": 44445
   }
 }
