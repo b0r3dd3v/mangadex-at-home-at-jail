@@ -5,6 +5,7 @@ settings_file=/usr/home/mangadexathome/mangadexathome/settings.json
 # Retrieve data from settings.json
 case $1 in
     client_secret) echo `jq '.client_secret' $settings_file` ;;
+    client_hostname) echo `jq '.client_hostname' $settings_file` ;;
 	client_port) echo `jq '.client_port' $settings_file` ;;
 	threads) echo `jq '.threads' $settings_file` ;;
 	graceful_shutdown_wait_seconds) echo `jq '.graceful_shutdown_wait_seconds' $settings_file` ;;

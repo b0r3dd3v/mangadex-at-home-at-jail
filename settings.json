@@ -11,6 +11,14 @@
 			"default": "44444",
 			"requirerestart": true
 		},
+		"client_hostname": {
+			"type": "string",
+			"name": "client_hostname",
+			"description": "Hostname of the client (0.0.0.0 for public)",
+			"range": "0-65535",
+			"default": "44444",
+			"requirerestart": true
+		},
 		"client_port": {
 			"type": "int",
 			"name": "client_port",
@@ -62,7 +70,7 @@
 		"ui_hostname": {
 			"type": "string",
 			"name": "ui_hostname",
-			"description": "The hostname to use for the server stats. Warning: This could break the FreeNAS plugin manage button.",
+			"description": "The hostname to use for the server stats (0.0.0.0 for public). Warning: This could break the FreeNAS plugin manage button.",
 			"default": "127.0.0.1",
 			"requirerestart": true
 		},
