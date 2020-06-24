@@ -28,3 +28,4 @@ sysrc mangadexathome_enable=YES
 # We can't start the service because the settings.json has to be configured
 
 echo "Make sure to add your client_secret to '/usr/home/mangadexathome/mangadexathome/settings.json' and configure the other settings for your system (or set them via iocage (ex: iocage set -P client_secret=aaaaaaaaa mangadexathome)"
+echo "The ui_hostname is 0.0.0.0 by default so that it's accessible. Make sure you ahve a firewall or change that if you don't want it public"
