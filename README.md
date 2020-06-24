@@ -49,4 +49,16 @@ The cache directory can become large and have many thousands of files which make
 
 ### What are iocage get and set commands?
 
-iocage is a commandline tool to install/uninstall/start/stop/configure jails. The get and set commands 
+iocage is a commandline tool to install/uninstall/start/stop/configure jails. The get and set commands can be used to update plugin specific configuration. Eventually there may be a FreeNAS UI to handle this, but for now we have to use the commands.
+
+The valid get/set values are described in settings.json file at the root of the repository. That being said, the settings names match 1-1 with the mangadexathome settings.json keys.
+
+Examples of iocage get
+
+    iocage get -P client_port mangadexathome
+    iocage get -P max_cache_size_in_mebibytes
+
+Examples of iocage set (The mangadexathome service will restart after running iocage set)
+
+    iocage set -P client_secret=aaaaaaa mangadexathome
+    iocage set -P max_cache_size_in_mebibytes=1000 mangadexathome
