@@ -51,7 +51,7 @@ The cache directory can become large and have many thousands of files which make
 
 iocage is a commandline tool to install/uninstall/start/stop/configure jails. The get and set commands can be used to update plugin specific configuration. Eventually there may be a FreeNAS UI to handle this, but for now we have to use the commands.
 
-The valid get/set values are described in settings.json file at the root of the repository. That being said, the settings names match 1-1 with the mangadexathome settings.json keys.
+The valid get/set values are described in the settings.json file at the root of the repository. That being said, the settings names match 1-1 with the mangadexathome settings.json keys. The exception is that the "ui_port_ and "ui_hostname" values are used instead of the full path for them ("web_settings.ui_port", "web_settings.ui_hostname")
 
 Examples of iocage get
 
