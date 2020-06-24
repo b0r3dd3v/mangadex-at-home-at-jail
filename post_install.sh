@@ -6,11 +6,11 @@ pw add user -n mangadexathome -c mangadexathome -s /bin/nologin
 # Make are rc.d script executable
 chmod +x /etc/rc.d/mangadexathome
 
+# This is due to the Overlay. Anything created through will be owned by root...
+chown -R mangadexathome:mangadexathome /usr/home/mangadexathome
+
 # Change into the main mangadexathome directory
 cd /usr/home/mangadexathome/mangadexathome
-
-# Add mangadexathome as the owner of the setting.json.default
-chown mangadexathome:mangadexathome settings.json.default
 
 # Deal with the settings.json file
 if [ -e settings.json ]
@@ -19,7 +19,7 @@ then
 else
   # If "settings.json" doesn't exist, make it based on "settings.json.default"
   cp settings.json.default settings.json
-  chown mangadexathome:mangadexathome settings.json.default
+  chown mangadexathome:mangadexathome settings.json
 fi
 
 # Enable mangadexathome service

@@ -27,7 +27,8 @@ mangadexathome_stop()
         read pid < $pidfile
         case $pid in
             *[!0-9]*) echo "$pidfile is not a valid pid file" ;;
-            *) kill $pid ;;
+            *) kill $pid 
+               wait $pid ;;
         esac
     else
         echo "$pidfile does not exist (is mangadexathome running?)"
