@@ -12,7 +12,7 @@ To do this, first download the "mangadexathome.json" file from this repository i
 
 Once that's done, you can install the plugin
 
-    iocage fetch --name mangadexathome -P mangadexathome.json -dhcp=on
+    iocage fetch --name mangadexathome -P mangadexathome.json dhcp=on
 
 ## Post-Installation
 
