@@ -7,6 +7,7 @@ case $1 in
     client_secret) echo `jq '.client_secret' $settings_file` ;;
     client_hostname) echo `jq '.client_hostname' $settings_file` ;;
 	client_port) echo `jq '.client_port' $settings_file` ;;
+	client_external_port) echo `jq '.client_external_port' $settings_file` ;;
 	threads) echo `jq '.threads' $settings_file` ;;
 	graceful_shutdown_wait_seconds) echo `jq '.graceful_shutdown_wait_seconds' $settings_file` ;;
 	max_cache_size_in_mebibytes) echo `jq '.max_cache_size_in_mebibytes' $settings_file` ;;

@@ -22,7 +22,15 @@
 		"client_port": {
 			"type": "int",
 			"name": "client_port",
-			"description": "Port for incoming Mangadex client connections",
+			"description": "Port for connecting to Mangadex",
+			"range": "0-65535",
+			"default": "44444",
+			"requirerestart": true
+		},
+		"client_external_port": {
+			"type": "int",
+			"name": "client_external_port",
+			"description": "Port for incoming Mangadex client connections. If 0, this is the same as client_port (useful if you proxy external connections to a different internal port)",
 			"range": "0-65535",
 			"default": "44444",
 			"requirerestart": true

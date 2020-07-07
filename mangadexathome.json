@@ -5,7 +5,8 @@
   "artifact": "https://github.com/radonbark/mangadex-at-home-at-jail.git",
   "pkgs": [
     "java/openjdk14",
-    "textproc/jq"
+    "textproc/jq",
+    "security/libsodium"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {

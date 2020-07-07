@@ -2,6 +2,7 @@
   "client_secret": "nosenpaithisisoursecret",
   "client_hostname": "0.0.0.0",
   "client_port": 44444,
+  "client_external_port": 0,
   "threads": 16,
   "graceful_shutdown_wait_seconds": 60,
   "max_cache_size_in_mebibytes": 80000,

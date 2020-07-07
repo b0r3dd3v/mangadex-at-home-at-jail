@@ -7,6 +7,7 @@ case $1 in
     client_secret) jq --arg a2 "$2" '.client_secret = $a2' $settings_file | sponge $settings_file ;;
     client_hostname) jq --arg a2 "$2" '.client_hostname = $a2' $settings_file | sponge $settings_file ;;
 	client_port) jq --arg a2 "$2" '.client_port = $a2' $settings_file | sponge $settings_file ;;
+    client_external_port) jq --arg a2 "$2" '.client_external_port = $a2' $settings_file | sponge $settings_file ;;
 	threads) jq --arg a2 "$2" '.client_port = $a2' $settings_file | sponge $settings_file ;;
 	graceful_shutdown_wait_seconds) jq --arg a2 "$2" '.graceful_shutdown_wait_seconds = $a2' settings_file ;;
 	max_cache_size_in_mebibytes) jq --arg a2 "$2" '.max_cache_size_in_mebibytes = $a2' $settings_file | sponge $settings_file ;;
