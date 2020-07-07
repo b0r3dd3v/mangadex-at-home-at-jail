@@ -6,7 +6,8 @@
   "pkgs": [
     "java/openjdk14",
     "textproc/jq",
-    "security/libsodium"
+    "security/libsodium",
+    "sysutils/moreutils"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {
