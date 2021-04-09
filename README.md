@@ -4,6 +4,8 @@ Mangadex at Home at Jail is a FreeNAS plugin meant to help make setting up the M
 
 If you are curious about the mangadexathome client (overlay/usr/home/mangadexathome/mangadexathome/mangadex_at_home.jar), you can see the source on gitlab: https://gitlab.com/mangadex-pub/mangadex_at_home/
 
+Now, Im curious about overlay stuff.
+
 ## Installation
 
 Because this is not an official community plugin, it needs to be installed via command line.
